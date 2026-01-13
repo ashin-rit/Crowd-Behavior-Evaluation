@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+data/raw/*
+!data/raw/.gitkeep
+results/*
+!results/.gitkeep
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+~*
