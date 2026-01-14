@@ -1,0 +1,95 @@
+{
+  "classification_thresholds": {
+    "safe": {
+      "density_min": 0.0,
+      "density_max": 2.0,
+      "color_hex": "#00FF00",
+      "color_name": "Green",
+      "alert_level": 0,
+      "requires_action": false,
+      "description": "Normal crowd conditions - no intervention needed"
+    },
+    "moderate": {
+      "density_min": 2.0,
+      "density_max": 3.5,
+      "color_hex": "#7FFF00",
+      "color_name": "Yellow-Green",
+      "alert_level": 1,
+      "requires_action": false,
+      "description": "Increased density - monitor situation"
+    },
+    "warning": {
+      "density_min": 3.5,
+      "density_max": 5.0,
+      "color_hex": "#FFFF00",
+      "color_name": "Yellow",
+      "alert_level": 2,
+      "requires_action": true,
+      "description": "High density - prepare for intervention"
+    },
+    "critical": {
+      "density_min": 5.0,
+      "density_max": 7.0,
+      "color_hex": "#FF8C00",
+      "color_name": "Orange",
+      "alert_level": 3,
+      "requires_action": true,
+      "description": "Critical congestion - immediate action required"
+    },
+    "emergency": {
+      "density_min": 7.0,
+      "density_max": 999.0,
+      "color_hex": "#FF0000",
+      "color_name": "Red",
+      "alert_level": 4,
+      "requires_action": true,
+      "description": "Emergency situation - evacuate immediately"
+    }
+  },
+  
+  "movement_thresholds": {
+    "speed": {
+      "very_slow": 0.5,
+      "slow": 1.0,
+      "normal": 1.5,
+      "fast": 2.0
+    },
+    "direction_variance": {
+      "orderly": 60,
+      "moderate": 100,
+      "chaotic": 140,
+      "panic": 180
+    }
+  },
+  
+  "severity_weights": {
+    "density_weight": 0.60,
+    "speed_weight": 0.20,
+    "variance_weight": 0.20
+  },
+  
+  "elevation_rules": {
+    "panic_detection": {
+      "enabled": true,
+      "speed_threshold": 0.5,
+      "variance_threshold": 120,
+      "elevation_amount": 1
+    },
+    "orderly_evacuation": {
+      "enabled": true,
+      "speed_threshold": 1.5,
+      "variance_threshold": 60,
+      "elevation_amount": 0
+    }
+  },
+  
+  "capacity_settings": {
+    "max_safe_density": 2.0,
+    "max_comfortable_density": 3.5,
+    "max_tolerable_density": 7.0,
+    "absolute_max_density": 10.0
+  },
+  
+  "version": "1.0",
+  "last_updated": "2026-01-15"
+}
